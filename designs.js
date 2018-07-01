@@ -33,7 +33,7 @@ function makeGrid(x,y){
   }
 
 
-  $('td').on('click','td'(function(event){
+  $('td').on('click'(function(event){
     var color=$('#colorPicker').val();
     if ($(this).attr('style')) {
        $(this).removeAttr('style')
@@ -42,6 +42,6 @@ function makeGrid(x,y){
        $(this).css('background-color',color);
    }
 
-  });
+ }));
 
 };
