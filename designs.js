@@ -4,9 +4,6 @@
 // When size is submitted by the user, call makeGrid()
 
 
-// When size is submitted by the user, call makeGrid(
-
-
 var color, rows,columns;
 
 
