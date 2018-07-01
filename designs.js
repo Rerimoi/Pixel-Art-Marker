@@ -33,7 +33,7 @@ function makeGrid(x,y){
   }
 
 
-  $('td').click(function(event){
+  $('td').on('click','td'(function(event){
     var color=$('#colorPicker').val();
     if ($(this).attr('style')) {
        $(this).removeAttr('style')
