@@ -24,7 +24,7 @@ function makeGrid(x,y){
 
 // for loop to set the  no of rows and columns grid to appear after submit button is clicked
   for (var i = 1; i <= x; i++) {
-    $('#pixelCanvas').append('<tr></tr>');
+    $('#pixelCanvas').append('<tr id=table' +i'></tr>');
 
     for (var j = 1; j <= y; j++) {
       $('#pixelCanvas').filter(':last').append('<td></td>');
