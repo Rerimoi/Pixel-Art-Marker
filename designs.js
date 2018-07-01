@@ -18,7 +18,7 @@ $('#sizePicker').submit (function makeGrid(grid) {
   var color=$('#colorPicker').val();
   makeGrid(rows, columns);
 
-function makeGrid(rows,columns){
+
   $('tr').remove();
 
 // for loop to set the  no of rows and columns grid to appear after submit button is clicked
@@ -36,7 +36,6 @@ function makeGrid(rows,columns){
     var color=$('#colorPicker').val();
     $(event.target).css('background-color',color);
   });
-}
 
 });
 });
