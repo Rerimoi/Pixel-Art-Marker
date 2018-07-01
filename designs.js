@@ -24,7 +24,7 @@ function makeGrid(x,y){
 
 // for loop to set the  no of rows and columns grid to appear after submit button is clicked
   for (var i = 1; i <= x; i++) {
-    $('#pixelCanvas').append('<tr id=table' +i'></tr>');
+    $('#pixelCanvas').append('<tr></tr>');
 
     for (var j = 1; j <= y; j++) {
       $('#pixelCanvas').filter(':last').append('<td></td>');
@@ -33,15 +33,15 @@ function makeGrid(x,y){
   }
 
 
-  $('td').on('click'(function(event){
+  $('td').click(function(event){
     var color=$('#colorPicker').val();
     if ($(this).attr('style')) {
-       $(this).removeAttr('style')
-   }
-    else {
-       $(this).css('background-color',color);
-   }
+        $(this).removeAttr('style')
+    }
+     else {
+          $(event.target).css('background-color',color);
+    }
 
- }));
+  });
 
 };
