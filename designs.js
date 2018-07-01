@@ -4,19 +4,35 @@
 // When size is submitted by the user, call makeGrid()
 
 
+// When size is submitted by the user, call makeGrid(
+
+
+var color, rows,columns;
+
+
 $('#sizePicker').submit (function makeGrid(grid) {
    // declare the rows and columns
-  var n=$('#inputHeight').value();
-  var m=$('#inputWeight').value();
-// for loop to set the  no of rows and columns grid to appear after submit button is clicked
-  for (var i = 1; i <= n; i++) {
-    $('table').append('<tr></tr>');
+  var rows=$('#inputHeight').val();
+  var columns=$('#inputWeight').val();
+  var color=$('#colorPicker').val();
 
-    for (var j = 1; i < m; j++) {
-      $('tr:last').append('<td></td>');
+  $(tr).remove();
+
+// for loop to set the  no of rows and columns grid to appear after submit button is clicked
+  for (var i = 1; i <= rows; i++) {
+    $('#pixelCanvas').append('<tr></tr>');
+
+    for (var j = 1; i < columns; j++) {
+      $('#pixelCanvas').filter(':last').append('<td></td>');
+
     }
   }
+  grid.preventDefault();
+
+  $('td').click(function(event){
+    var color=$('#colorPicker').val();
+    $(event.target).css('background-color',color);
+  });
 
 
-
-})
+});
