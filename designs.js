@@ -10,14 +10,14 @@ function makeGrid(height, width) {
 
     // Your code goes here!
       var html = "";
-      for(var i = 0; i < height; i++){
+      for(var i = 0; i <= height; i++){
         html += "<tr>";
-        for(var j = 0; j < width; j++){
+        for(var j = 0; j < = width; j++){
           html += "<td></td>";
         }
         html += "</tr>";
       }
-      $("#pixelCanvas").html(html);
+      $("#pixel_canvas").html(html);
     }
 
     $(function(){
@@ -25,16 +25,18 @@ function makeGrid(height, width) {
       $("#sizePicker").on('submit', function(event){
          height = $("#input_height").val();
          width = $("#input_width").val();
-        //console.log(height, width);
+         color = $("#colorPicker").val();
+
         event.preventDefault();
         makeGrid(height, width);
       });
-      $("#pixelCanvas").on('click', 'td', function(){
+      $("#pixel_canvas").on('click', 'td', function(){
         var color = $("#colorPicker").val();
-        //console.log($(this).css("background-color"));
+
         if($(this).css("background-color") == "#FFFFFF" || $(this).css("background-color") == "rgba(0, 0, 0, 0)" || $(this).css("background-color") == "rgb(255, 255, 255)") {
           $(this).css("background-color", color);
-        } else {
+        }
+        else {
           $(this).css("background-color", "#FFFFFF");
         }
       })
